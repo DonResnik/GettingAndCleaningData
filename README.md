@@ -40,4 +40,33 @@ in a folder called 'UCI HAR Dataset'
 
 Run 'run_analysis.R'
 
-The program will create a file called 'tidySummary.csv' that is described in codebook.Rmd
+30 subjects performed exercise activities using wearable monoitors
+the groups were split by test data and training data
+the training data subjects are
+1,3,5,6,7,8,11,14,15,16,17,19,21,22,23,25,26,27,28,29,30
+the test data subjects are
+2,4,9,10,12,13,18,20,24
+
+First we need to combine the training and test data into one data set
+the data is spread out over several files for both the training and test data
+
+When we have all the data loaded for the training and test data we need to combine them
+into one data set
+
+Data frame dataTrainTest has 561 columns in it.  These columns are identified in the features.txt.file
+we only want the rows that are the mean or standard deviation values.  So we need to get
+these row numbers from the features table.  We will grep the rows out of features.txt 
+
+Then we have to tidy up the activityId with the name of the activity
+and tidy up the feature column headers by renaming the 'Vxxx' columns with 
+readable names from the features.txt file
+
+Create a list to hold the descriptions of the columns names
+if the column name does not start with V, then just add it to the list
+if it does start with V, substirng past the V to get the id, then replace
+the id with the text name of the feature
+
+Average of each variable for each activity and each subject
+and create a summarized table grouped by the subjectId and activityName
+
+The program will create a file called 'tidySummary.csv' that is described in CodeBook.md

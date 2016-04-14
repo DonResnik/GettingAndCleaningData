@@ -88,7 +88,7 @@ featuresMeanSddf <- data.frame(featuresMeanSd)
 for (i in featuresMeanSddf) {
   featureMatch <- features[i,]
 }
-# craete a list to hold the descriptions of the columns names
+# create a list to hold the descriptions of the columns names
 # if the column name does not start with V, then just add it to the list
 # if it does start with V, substirng past the V to get the id, then replace
 # the id with the text name of the feature
@@ -120,5 +120,5 @@ summaryData <- subjectActivityNameMerge %>% group_by(subjectId,activityName) %>%
 
 save(subjectActivity,dataTrainTest,features,featuresMeanSdToMatch,subjectActivityDataArrange,subjectActivityNameMerge,summaryData,file='myfile.Rda')
 
-# save the summary data frame in a file called summary.csv
+# save the summary data frame in a file called tidySummary.csv
 write.csv(summaryData,"tidySummary.csv")
