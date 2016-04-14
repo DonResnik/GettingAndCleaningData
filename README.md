@@ -69,4 +69,4 @@ the id with the text name of the feature
 Average of each variable for each activity and each subject
 and create a summarized table grouped by the subjectId and activityName
 
-The program will create a file called 'tidySummary.csv' that is described in CodeBook.md
+The program will create a file called 'tidySummary.txt' that is described in CodeBook.md
