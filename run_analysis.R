@@ -121,4 +121,4 @@ summaryData <- subjectActivityNameMerge %>% group_by(subjectId,activityName) %>%
 save(subjectActivity,dataTrainTest,features,featuresMeanSdToMatch,subjectActivityDataArrange,subjectActivityNameMerge,summaryData,file='myfile.Rda')
 
 # save the summary data frame in a file called tidySummary.csv
-write.csv(summaryData,"tidySummary.csv")
+write.table(summaryData,"tidySummary.txt", row.name=FALSE)
