@@ -40,4 +40,4 @@ in a folder called 'UCI HAR Dataset'
 
 Run 'run_analysis.R'
 
-The program will create a file called 'summary.csv' that is described in codebook.md
+The program will create a file called 'tidySummary.csv' that is described in codebook.Rmd
